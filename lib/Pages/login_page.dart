@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({super.key, required this.title});
+  const LoginPage({super.key});
 
-  final String title;
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
@@ -16,8 +15,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
+        title: Text('Login Page'),
       ),
       body: SizedBox(
         width: double.infinity,
@@ -50,7 +48,7 @@ class _LoginPageState extends State<LoginPage> {
                     children: [
                       Text('Username:',
                       style: TextStyle(fontSize: 16),),
-                      Container(
+                      SizedBox(
                         width: 200,
                         height: 50,
                         child: TextFormField(
@@ -67,7 +65,7 @@ class _LoginPageState extends State<LoginPage> {
                     children: [
                       Text('Password:',
                       style: TextStyle(fontSize: 16),),
-                      Container(
+                      SizedBox(
                         width: 200,
                         height: 50,
                         child: TextFormField(
@@ -81,7 +79,7 @@ class _LoginPageState extends State<LoginPage> {
                       )
                     ],
                   ),
-                  Container(
+                  SizedBox(
                     width: 100,
                     child: FilledButton(
                       onPressed: (){

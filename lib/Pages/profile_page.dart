@@ -71,12 +71,10 @@ class _ProfilePageState extends State<ProfilePage> {
                   color: Colors.black,
                 ),
               ),
-              Container(
-                child: Image.asset(
+              Image.asset(
                   width: 400,
                   "assets/$pic"
                 ),
-              )
             ],
           ),
         ),

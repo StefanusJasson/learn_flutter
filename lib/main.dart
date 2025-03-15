@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_batch_5/Pages/layout_page.dart';
+import 'package:flutter_batch_5/Pages/List_and_Grid/gridview_builder_page.dart';
 import 'package:flutter_batch_5/Pages/login_page.dart';
-import 'package:flutter_batch_5/Pages/main_page.dart';
-import 'package:flutter_batch_5/Pages/profile_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,13 +13,23 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      themeMode: ThemeMode.light,
       theme: ThemeData(
+        brightness: Brightness.light,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.deepPurple,
+          foregroundColor: Colors.white
+        ),
       ),
-      home: const LoginPage(title: 'Login Page'),
-      // home: const ProfilePage(title: 'Flutter Demo Profile Page'),
-      // home: const LayoutPage(title: 'Flutter Demo Layout Page'),
-      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.deepPurple,
+          foregroundColor: Colors.white
+        ),
+      ),
+      home: const LoginPage(),
     );
   }
 }
