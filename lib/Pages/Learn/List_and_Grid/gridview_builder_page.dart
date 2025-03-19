@@ -24,7 +24,7 @@ class _GridviewBuilderPageState extends State<GridviewBuilderPage> {
         itemCount: menu.length,
         itemBuilder:(context, index) => GestureDetector(
           onTap: () {
-            print(menu[index]['menu']);
+            
           },
           child: Card(
             child: Column(
